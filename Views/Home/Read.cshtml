@@ -1,0 +1,55 @@
+﻿@{
+}
+
+<h1>@ViewBag.Title</h1>
+
+<h1>RECORDS FROM DATABASE</h1>
+
+@{int i = 0;}
+@foreach (var emp in ViewBag.display)
+{
+
+    <table border="0" cellpadding="0" cellspacing="0" style="width:10%;float:left">
+        <tbody>
+
+            @foreach (var item in emp)
+            {
+                <tr>
+                    <td>@item</td>
+                </tr>
+                i++;
+            }
+        </tbody>
+    </table>
+
+}
+
+
+
+<form action="/Home">
+    <input type="submit" value="Go Back" />
+</form>
+
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #41f450;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #FFFFFF;
+    }
+</style>
+
+<style>
+    body {
+    }
+</style>
